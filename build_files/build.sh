@@ -10,11 +10,11 @@ set -ouex pipefail
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/43/x86_64/repoview/index.html&protocol=https&redirect=1
 
 # this installs a package from fedora repos
-dnf5 install -y kitty
-dnf5 --enable-repo=brave-browser install -y kitty
-dnf5 --enable-repo=librewolf install -y librewolf.x86_64
-dnf5 install -y brave-browser
-dnf5 --enable-repo=mullvad-stable install -y mullvad-vpn
+dnf5 -y install kitty
+dnf5 -y --enable-repo=brave-browser install kitty
+dnf5 -y --enable-repo=librewolf install librewolf.x86_64
+dnf5 -y install brave-browser
+dnf5 -y --enable-repo=mullvad-stable install mullvad-vpn
 dnf5 -y --enable-repo=terra install mangowm
 dnf5 -y --enable-repo=terra install noctalia-shell
 
