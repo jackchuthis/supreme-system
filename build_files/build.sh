@@ -9,7 +9,6 @@ set -ouex pipefail
 # List of rpmfusion packages can be found here:
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/43/x86_64/repoview/index.html&protocol=https&redirect=1
 dnf5 config-manager addrepo --from-repofile=https://repo.librewolf.net/librewolf.repo
-dnf5 config-manager addrepo --from-repofile=https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo
 dnf5 config-manager addrepo --from-repofile=https://repository.mullvad.net/rpm/stable/mullvad.repo
 
 dnf5 clean all
@@ -18,7 +17,6 @@ dnf5 clean all
 dnf5 -y install kitty
 dnf5 -y install qt6ct
 dnf5 -y install kvantum
-dnf5 -y --enable-repo=brave-browser install brave-browser
 dnf5 -y --enable-repo=librewolf install librewolf
 dnf5 -y --enable-repo=mullvad-stable install mullvad-vpn
 dnf5 -y --enable-repo=terra install mangowm
@@ -28,6 +26,9 @@ dnf5 -y copr enable lukenukem/asus-linux
 dnf5 -y install asusctl supergfxctl
 dnf5 -y install asusctl-rog-gui
 dnf5 -y copr disable lukenukem/asus-linux
+
+dnf5 config-manager addrepo --from-repofile=https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo && \ dnf5 -y --enable-repo=brave-browser install brave-browser
+
 
 # Use a COPR Example:
 #
