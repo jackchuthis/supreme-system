@@ -12,6 +12,8 @@ dnf5 config-manager addrepo --from-repofile=https://repo.librewolf.net/librewolf
 dnf5 config-manager addrepo --from-repofile=https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo
 dnf5 config-manager addrepo --from-repofile=https://repository.mullvad.net/rpm/stable/mullvad.repo
 
+dnf5 clean all
+
 # this installs a package from fedora repos
 dnf5 -y install kitty
 dnf5 -y install qt6ct
