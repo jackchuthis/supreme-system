@@ -21,7 +21,7 @@ dnf5 -y --enable-repo=terra install noctalia-shell
 dnf5 -y copr enable lukenukem/asus-linux
 dnf5 -y install asusctl supergfxctl
 dnf5 -y install asusctl-rog-gui
-dnf5 -y copr disable
+dnf5 -y copr disable lukenukem/asus-linux
 
 # Use a COPR Example:
 #
