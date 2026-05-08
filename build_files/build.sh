@@ -11,9 +11,10 @@ set -ouex pipefail
 
 # this installs a package from fedora repos
 dnf5 -y install kitty
-dnf5 -y --enable-repo=brave-browser install kitty
-dnf5 -y --enable-repo=librewolf install librewolf.x86_64
-dnf5 -y install brave-browser
+dnf5 -y install qt6ct
+dnf5 -y install kvantum
+dnf5 -y --enable-repo=brave-browser install brave-browser
+dnf5 -y --enable-repo=librewolf install librewolf
 dnf5 -y --enable-repo=mullvad-stable install mullvad-vpn
 dnf5 -y --enable-repo=terra install mangowm
 dnf5 -y --enable-repo=terra install noctalia-shell
