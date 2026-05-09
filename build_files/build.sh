@@ -22,11 +22,11 @@ dnf5 -y copr enable lukenukem/asus-linux
 dnf5 -y install asusctl supergfxctl asusctl-rog-gui
 dnf5 -y copr disable lukenukem/asus-linux
 
-run0 curl -fsSLo /etc/yum.repos.d/brave-browser.repo https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo
+curl -fsSLo /etc/yum.repos.d/brave-browser.repo https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo
 
-rpm-ostree install brave-browser
+rpm-ostree update --install brave-browser
 
-curl --tlsv1.3 -fsS https://repository.mullvad.net/rpm/stable/mullvad.repo | sudo tee /etc/yum.repos.d/mullvad.repo
+curl -fsSLo /etc/yum.repos.d/mullvad.repo https://repository.mullvad.net/rpm/stable/mullvad.repo
 
 # install it
 rpm-ostree update --install mullvad-vpn
