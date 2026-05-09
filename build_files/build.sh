@@ -24,7 +24,7 @@ dnf5 -y copr disable lukenukem/asus-linux
 
 dnf5 -y config-manager addrepo --from-repofile=https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo
 rm -rf "/opt/brave.com/"
-mkdir -p "opt/brave.com/"
+mkdir -p "/opt/brave.com/"
 dnf5 -y --enable-repo=brave-browser install brave-browser
 
 dnf5 -y config-manager addrepo --from-repofile=https://repository.mullvad.net/rpm/stable/mullvad.repo
