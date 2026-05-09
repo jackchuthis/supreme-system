@@ -19,7 +19,7 @@ dnf5 -y install kitty kvantum qt6ct
 dnf5 -y --enable-repo=librewolf install librewolf
 dnf5 -y --enable-repo=brave-browser install brave-browser
 dnf5 -y --enable-repo=mullvad-stable install mullvad-vpn
-dnf5 -y --enable-repo=terra install noctalia-shell noctalia-qs mangowm
+dnf5 -y --enable-repo=terra install noctalia-shell noctalia-qs mangowm asusctl asusctl-rog-gui supergfxctl
 
 # dnf5 -y copr enable lukenukem/asus-linux
 # dnf5 -y install asusctl asusctl-rog-gui #supergfxctl
