@@ -15,15 +15,15 @@ dnf5 -y config-manager addrepo --from-repofile=https://brave-browser-rpm-release
 dnf5 -y config-manager addrepo --from-repofile=https://repository.mullvad.net/rpm/stable/mullvad.repo
 
 # this installs a package from fedora repos
-dnf5 -y install kitty qt6ct kvantum
+dnf5 -y install kitty kvantum
 dnf5 -y --enable-repo=librewolf install librewolf
 dnf5 -y --enable-repo=brave-browser install brave-browser
 dnf5 -y --enable-repo=mullvad-stable install mullvad-vpn
 dnf5 -y --enable-repo=terra install noctalia-shell noctalia-qs mangowm
 
-# dnf5 -y copr enable lukenukem/asus-linux
-# dnf5 -y install asusctl supergfxctl asusctl-rog-gui
-# dnf5 -y copr disable lukenukem/asus-linux
+dnf5 -y copr enable lukenukem/asus-linux
+dnf5 -y install asusctl asusctl-rog-gui #supergfxctl
+dnf5 -y copr disable lukenukem/asus-linux
 
 
 # Use a COPR Example:
