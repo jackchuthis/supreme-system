@@ -32,10 +32,10 @@ dnf5 -y copr disable lukenukem/asus-linux
 # rpm-ostree update --install mullvad-vpn
 
 dnf5 -y config-manager addrepo --from-repofile=https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo
-dnf5 -y --enable-repo=brave-browser install brave-browser --allowerasing
+dnf5 -y --enable-repo=brave-browser install brave-browser
 
 dnf5 -y config-manager addrepo --from-repofile=https://repository.mullvad.net/rpm/stable/mullvad.repo
-dnf5 -y --enable-repo=mullvad-stable install mullvad-vpn --allowerasing
+dnf5 -y --enable-repo=mullvad-stable install mullvad-vpn
 
 # Use a COPR Example:
 #
