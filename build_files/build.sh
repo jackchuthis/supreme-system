@@ -11,6 +11,8 @@ set -ouex pipefail
 dnf5 -y config-manager addrepo --from-repofile=https://repo.librewolf.net/librewolf.repo
 
 dnf5 -y clean all
+rmdir /opt
+ln -sf var/opt /opt
 
 # this installs a package from fedora repos
 dnf5 -y install kitty qt6ct kvantum
@@ -22,20 +24,20 @@ dnf5 -y copr enable lukenukem/asus-linux
 dnf5 -y install asusctl supergfxctl asusctl-rog-gui
 dnf5 -y copr disable lukenukem/asus-linux
 
-curl -fsSLo /etc/yum.repos.d/brave-browser.repo https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo
-
-rpm-ostree update --install brave-browser
-
-curl -fsSLo /etc/yum.repos.d/mullvad.repo https://repository.mullvad.net/rpm/stable/mullvad.repo
-
-# install it
-rpm-ostree update --install mullvad-vpn
-
-# dnf5 -y config-manager addrepo --from-repofile=https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo
-# dnf5 -y --enable-repo=brave-browser install brave-browser --allowerasing
+# curl -fsSLo /etc/yum.repos.d/brave-browser.repo https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo
 #
-# dnf5 -y config-manager addrepo --from-repofile=https://repository.mullvad.net/rpm/stable/mullvad.repo
-# dnf5 -y --enable-repo=mullvad-stable install mullvad-vpn --allowerasing
+# rpm-ostree update --install brave-browser
+#
+# curl -fsSLo /etc/yum.repos.d/mullvad.repo https://repository.mullvad.net/rpm/stable/mullvad.repo
+#
+# # install it
+# rpm-ostree update --install mullvad-vpn
+
+dnf5 -y config-manager addrepo --from-repofile=https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo
+dnf5 -y --enable-repo=brave-browser install brave-browser --allowerasing
+
+dnf5 -y config-manager addrepo --from-repofile=https://repository.mullvad.net/rpm/stable/mullvad.repo
+dnf5 -y --enable-repo=mullvad-stable install mullvad-vpn --allowerasing
 
 # Use a COPR Example:
 #
