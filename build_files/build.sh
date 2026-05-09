@@ -2,7 +2,7 @@
 
 set -ouex pipefail
 
-mkdir -p "/var/opt" && ln -s "/var/opt"  "/opt"
+# mkdir -p "/var/opt" && ln -s "/var/opt"  "/opt"
 
 ### Install packages
 
