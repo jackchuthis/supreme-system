@@ -11,8 +11,11 @@ set -ouex pipefail
 dnf5 -y config-manager addrepo --from-repofile=https://repo.librewolf.net/librewolf.repo
 
 dnf5 -y clean all
-rmdir /opt
-ln -sf var/opt /opt
+if [[ ! -h /opt ]]; then
+        rm -fr /opt
+        mkdir -p /var/opt
+        ln -s /var/opt /opt
+fi
 
 # this installs a package from fedora repos
 dnf5 -y install kitty qt6ct kvantum
