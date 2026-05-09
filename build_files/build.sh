@@ -11,30 +11,20 @@ set -ouex pipefail
 # List of rpmfusion packages can be found here:
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/43/x86_64/repoview/index.html&protocol=https&redirect=1
 dnf5 -y config-manager addrepo --from-repofile=https://repo.librewolf.net/librewolf.repo
+dnf5 -y config-manager addrepo --from-repofile=https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo
+dnf5 -y config-manager addrepo --from-repofile=https://repository.mullvad.net/rpm/stable/mullvad.repo
 
 # this installs a package from fedora repos
-dnf5 -y install kitty qt6ct kvantum
+dnf5 -y install kitty qt6ct kvantum quickshell
 dnf5 -y --enable-repo=librewolf install librewolf
-dnf5 -y --enable-repo=terra install mangowm
-dnf5 -y --enable-repo=terra install noctalia-shell
+dnf5 -y --enable-repo=terra install mangowm noctalia-shell
 
 dnf5 -y copr enable lukenukem/asus-linux
 dnf5 -y install asusctl supergfxctl asusctl-rog-gui
 dnf5 -y copr disable lukenukem/asus-linux
 
-# curl -fsSLo /etc/yum.repos.d/brave-browser.repo https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo
-#
-# rpm-ostree update --install brave-browser
-#
-# curl -fsSLo /etc/yum.repos.d/mullvad.repo https://repository.mullvad.net/rpm/stable/mullvad.repo
-#
-# # install it
-# rpm-ostree update --install mullvad-vpn
-
-dnf5 -y config-manager addrepo --from-repofile=https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo
 dnf5 -y --enable-repo=brave-browser install brave-browser
 
-dnf5 -y config-manager addrepo --from-repofile=https://repository.mullvad.net/rpm/stable/mullvad.repo
 dnf5 -y --enable-repo=mullvad-stable install mullvad-vpn
 
 # Use a COPR Example:
