@@ -2,6 +2,8 @@
 
 set -ouex pipefail
 
+mkdir -p "/var/opt" && ln -s "/var/opt"  "/opt"
+
 ### Install packages
 
 # Packages can be installed from any enabled yum repo on the image.
@@ -9,13 +11,6 @@ set -ouex pipefail
 # List of rpmfusion packages can be found here:
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/43/x86_64/repoview/index.html&protocol=https&redirect=1
 dnf5 -y config-manager addrepo --from-repofile=https://repo.librewolf.net/librewolf.repo
-
-dnf5 -y clean all
-if [[ ! -h /opt ]]; then
-        rm -fr /opt
-        mkdir -p /var/opt
-        ln -s /var/opt /opt
-fi
 
 # this installs a package from fedora repos
 dnf5 -y install kitty qt6ct kvantum
