@@ -22,11 +22,12 @@ dnf5 -y copr enable lukenukem/asus-linux
 dnf5 -y install asusctl supergfxctl asusctl-rog-gui
 dnf5 -y copr disable lukenukem/asus-linux
 
-mkdir "/opt/brave.com"
 dnf5 -y config-manager addrepo --from-repofile=https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo
+rm -rf "/opt/brave.com/"
 dnf5 -y --enable-repo=brave-browser install brave-browser
-mkdir "/opt/Mullvad VPN"
+
 dnf5 -y config-manager addrepo --from-repofile=https://repository.mullvad.net/rpm/stable/mullvad.repo
+rm -rf "/opt/Mullvad VPN"
 dnf5 -y --enable-repo=mullvad-stable install mullvad-vpn
 
 # Use a COPR Example:
