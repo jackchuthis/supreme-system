@@ -14,6 +14,7 @@ dnf5 -y config-manager addrepo --from-repofile=https://repo.librewolf.net/librew
 dnf5 -y config-manager addrepo --from-repofile=https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo
 dnf5 -y config-manager addrepo --from-repofile=https://repository.mullvad.net/rpm/stable/mullvad.repo
 dnf5 -y install --repofrompath 'terra-rawhide,https://repos.fyralabs.com/terrarawhide' --setopt='terra.gpgkey=https://repos.fyralabs.com/terrarawhide/key.asc' terra-rawhide
+dnf5 repolist --all
 
 # this installs a package from fedora repos
 dnf5 -y install kitty kvantum qt6ct
