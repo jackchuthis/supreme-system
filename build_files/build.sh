@@ -14,8 +14,6 @@ dnf5 -y config-manager addrepo --from-repofile=https://repo.librewolf.net/librew
 dnf5 -y config-manager addrepo --from-repofile=https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo
 dnf5 -y config-manager addrepo --from-repofile=https://repository.mullvad.net/rpm/stable/mullvad.repo
 
-rm /etc/yum.repos.d/terra.repo
-dnf5 -y install --repofrompath 'terra,https://repos.fyralabs.com/terrarawhide' --setopt='terra.gpgkey=https://repos.fyralabs.com/terrarawhide/key.asc' terra-release
 dnf5 repolist --all
 
 # this installs a package from fedora repos
@@ -23,7 +21,7 @@ dnf5 -y install kitty kvantum qt6ct
 dnf5 -y --enable-repo=librewolf install librewolf
 dnf5 -y --enable-repo=brave-browser install brave-browser
 dnf5 -y --enable-repo=mullvad-stable install mullvad-vpn
-dnf5 -y --enable-repo=terra-release install noctalia-shell mangowm asusctl asusctl-rog-gui supergfxctl
+dnf5 -y --releasever=rawhide --enable-repo=terra install noctalia-shell mangowm asusctl asusctl-rog-gui supergfxctl
 #dnf5 -y --enable-repo=terra install asusctl asusctl-rog-gui supergfxctl
 
 # dnf5 -y copr enable lukenukem/asus-linux
