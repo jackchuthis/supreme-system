@@ -64,7 +64,7 @@
             "DP-1",
             "eDP-2"
         ],
-        "mouseWheelAction": "content",
+        "mouseWheelAction": "workspace",
         "mouseWheelWrap": true,
         "outerCorners": true,
         "position": "top",
@@ -308,6 +308,14 @@
                     "useDistroLogo": false
                 },
                 {
+                    "defaultSettings": {
+                        "backend": "auto",
+                        "gridSize": 40,
+                        "hyprctlCommand": "hyprctl",
+                        "iconColor": "primary",
+                        "snapToGrid": true,
+                        "swayCommand": "swaymsg"
+                    },
                     "id": "plugin:monitor-layout"
                 }
             ]
@@ -695,14 +703,14 @@
     },
     "osd": {
         "autoHideMs": 2000,
-        "backgroundOpacity": 1,
+        "backgroundOpacity": 0.75,
         "enabled": true,
         "enabledTypes": [
             0,
             1,
             2
         ],
-        "location": "top_right",
+        "location": "top",
         "monitors": [
         ],
         "overlayLayer": true
