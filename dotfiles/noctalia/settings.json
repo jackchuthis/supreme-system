@@ -306,6 +306,9 @@
                     "icon": "noctalia",
                     "id": "ControlCenter",
                     "useDistroLogo": false
+                },
+                {
+                    "id": "plugin:monitor-layout"
                 }
             ]
         }
@@ -840,7 +843,7 @@
     },
     "wallpaper": {
         "automationEnabled": false,
-        "directory": "/home/eos/Pictures/Wallpapers",
+        "directory": "/home/zeph/Pictures/Wallpapers",
         "enableMultiMonitorDirectories": true,
         "enabled": true,
         "favorites": [
