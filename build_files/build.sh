@@ -13,8 +13,8 @@ set -ouex pipefail
 dnf5 -y config-manager addrepo --from-repofile=https://repo.librewolf.net/librewolf.repo
 dnf5 -y config-manager addrepo --from-repofile=https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo
 dnf5 -y config-manager addrepo --from-repofile=https://repository.mullvad.net/rpm/stable/mullvad.repo
-dnf5 -y config-manager addrepo --from-repofile=https://terra.fyralabs.com/terra.repo
-
+dnf5 -y install --nogpgcheck --repofrompath 'terra,https://repos.fyralabs.com/terra$releasever' terra-release
+dnf5 repolist --all
 
 # this installs a package from fedora repos
 dnf5 -y install kitty kvantum qt6ct
