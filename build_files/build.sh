@@ -16,7 +16,7 @@ dnf5 -y config-manager addrepo --from-repofile=https://brave-browser-rpm-release
 dnf5 -y config-manager addrepo --from-repofile=https://repository.mullvad.net/rpm/stable/mullvad.repo
 
 # this installs a package from fedora repos
-dnf5 -y --releasever=rawhide install kitty kvantum qt6ct cliphist
+dnf5 -y install kitty kvantum qt6ct cliphist
 dnf5 -y --enable-repo=librewolf install librewolf
 dnf5 -y --enable-repo=brave-browser install brave-browser
 dnf5 -y --enable-repo=mullvad-stable install mullvad-vpn
