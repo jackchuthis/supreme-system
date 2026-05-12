@@ -28,7 +28,7 @@ dnf5 -y --enable-repo=terra install mangowm asusctl asusctl-rog-gui supergfxctl 
 # dnf5 -y copr disable lukenukem/asus-linux
 
 dnf5 -y copr enable lionheartp/Hyprland
-dnf5 -y install hyprland noctalia-qs noctalia-shell-v5 uwsm cliphist qt6ct
+dnf5 -y install hyprland noctalia-qs noctalia-shell uwsm cliphist qt6ct
 dnf5 -y copr disable lionheartp/Hyprland
 
 dnf5 -y copr enable yalter/niri-git
