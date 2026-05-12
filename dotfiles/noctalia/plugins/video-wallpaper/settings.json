@@ -6,49 +6,6 @@
   "mpvSocket": "/tmp/mpv-socket",
   "profile": "default",
   "volume": 1,
-  "wallpapersFolder": "/home/eos/Pictures/Wallpapers/Live",
-  "thumbCacheReady": true,
-  "enabled": true,
-  "monitorSpecific": true,
-  "eDP-2": {
-    "currentWallpaper": "/home/eos/Pictures/Wallpapers/3163534-uhd_3840_2160_30fps.mp4",
-    "volume": 0,
-    "automation": true,
-    "automationMode": "random",
-    "automationTime": 300,
-    "hardwareAcceleration": false,
-    "profile": "default",
-    "fillMode": "",
-    "orientation": 0,
-    "isMuted": true,
-    "isPlaying": true
-  },
-  "automationCustomTime": [],
-  "DP-3": {
-    "currentWallpaper": "/home/eos/Pictures/Wallpapers/Live/naruto-red-eyes.3840x2160.mp4",
-    "volume": 0,
-    "automation": true,
-    "automationMode": "random",
-    "automationTime": 300,
-    "hardwareAcceleration": false,
-    "profile": "default",
-    "fillMode": "crop",
-    "orientation": 0,
-    "isPlaying": true,
-    "isMuted": true
-  },
-  "DP-1": {
-    "currentWallpaper": "",
-    "isPlaying": true,
-    "volume": 1,
-    "automation": true,
-    "automationMode": "random",
-    "automationTime": 300,
-    "hardwareAcceleration": false,
-    "profile": "default",
-    "fillMode": "crop",
-    "orientation": 0,
-    "noctaliaWallpaper": "/home/eos/Pictures/Wallpapers/aishot-2926.jpg",
-    "isMuted": true
-  }
+  "wallpapersFolder": "~/Pictures/Wallpapers",
+  "thumbCacheReady": false
 }
