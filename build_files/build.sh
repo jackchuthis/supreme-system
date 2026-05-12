@@ -20,13 +20,20 @@ dnf5 -y install kitty kvantum qt6ct cliphist
 dnf5 -y --enable-repo=librewolf install librewolf
 dnf5 -y --enable-repo=brave-browser install brave-browser
 dnf5 -y --enable-repo=mullvad-stable install mullvad-vpn
-#dnf5 -y --enable-repo=terra install noctalia-shell mangowm asusctl asusctl-rog-gui supergfxctl
-dnf5 -y --releasever=rawhide --enable-repo=terra install noctalia-shell mangowm asusctl asusctl-rog-gui supergfxctl
+dnf5 -y --enable-repo=terra install mangowm asusctl asusctl-rog-gui supergfxctl #noctalia-shell
+#dnf5 -y --releasever=rawhide --enable-repo=terra install noctalia-shell mangowm asusctl asusctl-rog-gui supergfxctl
 
 # dnf5 -y copr enable lukenukem/asus-linux
 # dnf5 -y install asusctl asusctl-rog-gui #supergfxctl
 # dnf5 -y copr disable lukenukem/asus-linux
 
+dnf5 -y copr enable lionheartp/Hyprland
+dnf5 -y install hyprland noctalia-shell-v5 noctalia-qs uwsm
+dnf5 -y copr disable lionheartp/Hyprland
+
+dnf5 -y copr enable yalter/niri-git
+dnf5 -y install niri
+dnf5 -y copr disable yalter/niri-git
 
 # Use a COPR Example:
 #
