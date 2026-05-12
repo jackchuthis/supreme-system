@@ -16,7 +16,7 @@ dnf5 -y config-manager addrepo --from-repofile=https://brave-browser-rpm-release
 dnf5 -y config-manager addrepo --from-repofile=https://repository.mullvad.net/rpm/stable/mullvad.repo
 
 # this installs a package from fedora repos
-dnf5 -y install kitty kvantum qt6ct cliphist
+dnf5 -y install kitty kvantum #qt6ct cliphist qt6ct
 dnf5 -y --enable-repo=librewolf install librewolf
 dnf5 -y --enable-repo=brave-browser install brave-browser
 dnf5 -y --enable-repo=mullvad-stable install mullvad-vpn
@@ -28,7 +28,7 @@ dnf5 -y --enable-repo=terra install mangowm asusctl asusctl-rog-gui supergfxctl 
 # dnf5 -y copr disable lukenukem/asus-linux
 
 dnf5 -y copr enable lionheartp/Hyprland
-dnf5 -y install hyprland noctalia-shell-v5 noctalia-qs uwsm
+dnf5 -y install hyprland noctalia-qs noctalia-shell-v5 uwsm cliphist qt6ct
 dnf5 -y copr disable lionheartp/Hyprland
 
 dnf5 -y copr enable yalter/niri-git
