@@ -393,7 +393,7 @@
         "animationSpeed": 1,
         "backgroundOpacity": 0.6,
         "colorizeIcons": false,
-        "deadOpacity": 0.6,
+        "deadOpacity": 0.25,
         "displayMode": "auto_hide",
         "dockType": "floating",
         "enabled": true,

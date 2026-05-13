@@ -1,5 +1,5 @@
 {
-  "activeBackend": "qt6-multimedia",
+  "activeBackend": "mpvpaper",
   "automationMode": "random",
   "automationTime": 300,
   "fillMode": "fit",
@@ -10,7 +10,7 @@
   "thumbCacheReady": true,
   "monitorSpecific": true,
   "DP-2": {
-    "currentWallpaper": "/var/home/zeph/Pictures/wallpapers/cyberpunk-cityscape-moewalls-com.mp4",
+    "currentWallpaper": "/var/home/zeph/Pictures/wallpapers/cyberpunk-neon-tokyo-urban-street-moewalls-com.mp4",
     "isPlaying": true,
     "volume": 1,
     "automation": false,
@@ -36,7 +36,7 @@
     "fillMode": "stretch",
     "orientation": 0,
     "isPlaying": true,
-    "noctaliaWallpaper": "/home/zeph/Pictures/wallpapers/aishot-637.jpg",
+    "noctaliaWallpaper": "/home/zeph/Pictures/wallpapers/aishot-1341.jpg",
     "isMuted": true
   },
   "eDP-1": {

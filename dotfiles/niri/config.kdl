@@ -357,11 +357,11 @@ layout {
 // See the binds section below for more spawn examples.
 
 // This line starts waybar, a commonly used bar for Wayland compositors.
-// spawn-at-startup "/usr/lib/pam_kwallet_init"
-// spawn-at-startup "/usr/lib/polkit-kde-authentication-agent-1"
+spawn-at-startup "/usr/lib/pam_kwallet_init"
+spawn-at-startup "/usr/lib/polkit-kde-authentication-agent-1"
 // spawn-at-startup "waybar"
 // spawn-at-startup "shikane"
-// spawn-at-startup "kded6"
+spawn-at-startup "kded6"
 spawn-at-startup "qs" "-c" "noctalia-shell"
 
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
@@ -809,10 +809,16 @@ window-rule {
     default-window-height { fixed 800; }
     open-floating true
 }
+
+workspace "2" {
+    open-on-output "DP-9"
+}
 window-rule {
     match app-id="xwaylandvideobridge"
     // open-maximized true
     // open-maximized-to-edges true
+    open-on-output "DP-9"
+    open-on-workspace "2"
     open-fullscreen true
 }
 
@@ -820,7 +826,7 @@ environment {
     QT_QPA_PLATFORMTHEME "qt6ct"
     QT_QPA_PLATFORMTHEME_QT6 "qt6ct"
     QT_STYLE_OVERRIDE "kvantum"
-    GTK_THEME "adw-gtk-theme"
+    GTK_THEME "Sweet-v40"
     LIBVA_DRIVER_NAME "nvidia"
     NVD_BACKEND "direct"
     GBM_BACKEND "nvidia-drm"
