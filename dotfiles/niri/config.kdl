@@ -83,7 +83,7 @@ gestures {
         off
     }
     dnd-edge-view-scroll {
-        trigger-width 500
+        trigger-width 50
         max-speed 3000
     }
     dnd-edge-workspace-switch {
@@ -212,7 +212,7 @@ layout {
         proportion 0.33
         proportion 0.5
         proportion 0.66
-        proportion 0.995
+        proportion 1.0
 
         // Fixed sets the width in logical pixels exactly.
         // fixed 1920
@@ -227,7 +227,7 @@ layout {
     }
 
     // You can change the default width of the new windows.
-    default-column-width { proportion 0.66; }
+    default-column-width { proportion 0.5; }
     // If you leave the brackets empty, the windows themselves will decide their initial width.
     // default-column-width {}
 
@@ -456,7 +456,7 @@ binds {
     Mod+TAB repeat=false { toggle-overview; }
 
     Mod+Q repeat=false { close-window; }
-    Ctrl+F5 repeat=false { close-window; }
+    Mod+F5 repeat=false { close-window; }
     Mod+Left  { focus-column-left; }
     Mod+Down  { focus-window-down; }
     Mod+Up    { focus-window-up; }
@@ -645,7 +645,7 @@ binds {
     Mod+Shift+Equal { set-window-height "+10%"; }
 
     // Move the focused window between the floating and the tiling layout.
-    Shift+Left       { toggle-window-floating; }
+   // Shift+Left       { toggle-window-floating; }
     Mod+V            { toggle-window-floating; }
     Mod+Shift+V { switch-focus-between-floating-and-tiling; }
 
@@ -753,6 +753,7 @@ window-rule {
 debug {
   // Allows notification actions and window activation from Noctalia.
   honor-xdg-activation-with-invalid-serial
+  render-drm-device "/dev/dri/renderD129"
 }
 // Set the overview wallpaper on the backdrop.
 // layer-rule {
@@ -761,7 +762,7 @@ debug {
 //
 // }
 layer-rule {
-    match namespace="^noctalia-(background|launcher-overlay|dock)-.*$"
+    match namespace="^noctalia-(launcher-overlay|dock)-.*$"
     background-effect {
         xray false
         blur true
@@ -814,7 +815,7 @@ environment {
     QT_QPA_PLATFORMTHEME "qt6ct"
     QT_QPA_PLATFORMTHEME_QT6 "qt6ct"
     QT_STYLE_OVERRIDE "kvantum"
-    GTK_THEME "Sweet"
+    GTK_THEME "adw-gtk-theme"
     LIBVA_DRIVER_NAME "nvidia"
     NVD_BACKEND "direct"
     GBM_BACKEND "nvidia-drm"
