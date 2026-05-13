@@ -20,12 +20,13 @@
     "profile": "default",
     "fillMode": "crop",
     "orientation": 0,
-    "noctaliaWallpaper": "/home/zeph/Pictures/wallpapers/aishot-1341.jpg"
+    "noctaliaWallpaper": "/home/zeph/Pictures/wallpapers/aishot-1341.jpg",
+    "isMuted": true
   },
   "enabled": true,
   "automationCustomTime": [],
   "DP-9": {
-    "currentWallpaper": "",
+    "currentWallpaper": "/var/home/zeph/Pictures/wallpapers/futuristic-city-moewalls-com.mp4",
     "volume": 1,
     "automation": true,
     "automationMode": "random",
@@ -34,6 +35,11 @@
     "profile": "default",
     "fillMode": "stretch",
     "orientation": 0,
-    "isPlaying": true
+    "isPlaying": true,
+    "noctaliaWallpaper": "/home/zeph/Pictures/wallpapers/aishot-637.jpg",
+    "isMuted": true
+  },
+  "eDP-1": {
+    "isMuted": true
   }
 }

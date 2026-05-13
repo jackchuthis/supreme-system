@@ -194,7 +194,7 @@ output "DP-9" {
 // https://yalter.github.io/niri/Configuration:-Layout
 layout {
     // Set gaps around windows in logical pixels.
-    gaps 4
+    gaps 5
 
     // When to center a column when changing focus, options are:
     // - "never", default behavior, focusing an off-screen column will keep at the left
@@ -617,7 +617,7 @@ binds {
 
     Mod+Ctrl+R { reset-window-height; }
     //Mod+F { maximize-column; }
-    Mod+Shift+F { fullscreen-window; }
+    Shift+Escape { fullscreen-window; }
 
 
     // Expand the focused column to space not taken up by other fully visible columns.
@@ -809,7 +809,12 @@ window-rule {
     default-window-height { fixed 800; }
     open-floating true
 }
-
+window-rule {
+    match app-id="xwaylandvideobridge"
+    // open-maximized true
+    // open-maximized-to-edges true
+    open-fullscreen true
+}
 
 environment {
     QT_QPA_PLATFORMTHEME "qt6ct"
