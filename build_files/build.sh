@@ -10,15 +10,13 @@ set -ouex pipefail
 # RPMfusion repos are available by default in ublue main images
 # List of rpmfusion packages can be found here:
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/43/x86_64/repoview/index.html&protocol=https&redirect=1
-dnf5 -y remove ffmpegthumbs
-
 
 dnf5 -y config-manager addrepo --from-repofile=https://repo.librewolf.net/librewolf.repo
 dnf5 -y config-manager addrepo --from-repofile=https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo
 dnf5 -y config-manager addrepo --from-repofile=https://repository.mullvad.net/rpm/stable/mullvad.repo
 
 # this installs a package from fedora repos
-dnf5 -y install kitty kvantum cliphist qt6ct niri ffmpegthumbnailer #qt6ct cliphist qt6ct
+dnf5 -y install kitty kvantum cliphist qt6ct niri #ffmpegthumbnailer
 
 #dnf5 -y install --repo=updates niri
 dnf5 -y --enable-repo=librewolf install librewolf
