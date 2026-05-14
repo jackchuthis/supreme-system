@@ -823,8 +823,8 @@ window-rule {
 }
 
 environment {
-    QT_QPA_PLATFORMTHEME "qt6ct"
-    QT_QPA_PLATFORMTHEME_QT6 "qt6ct"
+    // QT_QPA_PLATFORMTHEME "qt6ct"
+    // QT_QPA_PLATFORMTHEME_QT6 "qt6ct"
     QT_STYLE_OVERRIDE "kvantum"
     GTK_THEME "Sweet-v40"
     LIBVA_DRIVER_NAME "nvidia"
@@ -832,7 +832,22 @@ environment {
     GBM_BACKEND "nvidia-drm"
     __GLX_VENDOR_LIBRARY_NAME "nvidia"
     PREFER_VULKAN "1"
+    XDG_CONFIG_HOME "$HOME/.config"
+    XDG_DATA_HOME "$HOME/.local/share"
+    XDG_CACHE_HOME "$HOME/.cache"
+    XDG_STATE_HOME "$HOME/.local/state"
+    QT_QPA_PLATFORM "wayland"
 
+    QT_QPA_PLATFORMTHEME "qt6ct"
+    QT_QPA_PLATFORMTHEME_QT6 "gtk3"
+
+    XDG_MENU_PREFIX "plasma-"
+
+    QT_AUTO_SCREEN_SCALE_FACTOR "1"
+    QT_ENABLE_HIGHDPI_SCALING "1"
+    QT_SCALE_FACTOR_ROUNDING_POLICY "RoundPreferFloor"
+
+    ELECTRON_OZONE_PLATFORM_HINT "auto"
 }
 
 include "./noctalia.kdl"
