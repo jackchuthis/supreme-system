@@ -16,8 +16,8 @@ dnf5 -y config-manager addrepo --from-repofile=https://brave-browser-rpm-release
 dnf5 -y config-manager addrepo --from-repofile=https://repository.mullvad.net/rpm/stable/mullvad.repo
 
 # this installs a package from fedora repos
-dnf5 -y install kitty kvantum cliphist qt6ct libva-nvidia-driver libva-utils \
-xdg-desktop-portal-gtk xdg-desktop-portal-kde niri ffmpegthumbnailer wxGTK-devel #qt6ct cliphist qt6ct
+dnf5 -y install kitty kvantum cliphist qt6ct \
+niri ffmpegthumbnailer mesa-libGLU-devel wxGTK-devel #qt6ct cliphist qt6ct
 #dnf5 -y install --repo=updates niri
 dnf5 -y --enable-repo=librewolf install librewolf
 dnf5 -y --enable-repo=brave-browser install brave-browser
