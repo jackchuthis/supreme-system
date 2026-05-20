@@ -826,16 +826,18 @@ environment {
     // QT_QPA_PLATFORMTHEME "qt6ct"
     // QT_QPA_PLATFORMTHEME_QT6 "qt6ct"
     QT_STYLE_OVERRIDE "kvantum"
-    GTK_THEME "Sweet-v40"
+    GTK_THEME "Sweet-Dark"
     LIBVA_DRIVER_NAME "nvidia"
     NVD_BACKEND "direct"
     GBM_BACKEND "nvidia-drm"
     __GLX_VENDOR_LIBRARY_NAME "nvidia"
     PREFER_VULKAN "1"
-    XDG_CONFIG_HOME "$HOME/.config"
-    XDG_DATA_HOME "$HOME/.local/share"
-    XDG_CACHE_HOME "$HOME/.cache"
-    XDG_STATE_HOME "$HOME/.local/state"
+
+    XDG_CONFIG_HOME "/home/zeph/.config"
+    XDG_DATA_HOME "/home/zeph/.local/share"
+    XDG_CACHE_HOME "/home/zeph/.cache"
+    XDG_STATE_HOME "/home/zeph/.local/state"
+
     QT_QPA_PLATFORM "wayland"
 
     QT_QPA_PLATFORMTHEME "qt6ct"
@@ -848,6 +850,8 @@ environment {
     QT_SCALE_FACTOR_ROUNDING_POLICY "RoundPreferFloor"
 
     ELECTRON_OZONE_PLATFORM_HINT "auto"
+
+    XDG_DATA_DIRS="/home/zeph/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share"
 }
 
 include "./noctalia.kdl"
