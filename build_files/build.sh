@@ -19,8 +19,8 @@ dnf5 -y config-manager addrepo --from-repofile=https://repository.mullvad.net/rp
 # dnf5 -y install https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 # this installs a package from fedora repos
 
-dnf5 -y install kitty kvantum cliphist qt6ct niri #ffmpegthumbnailer
-dnf5 -y install @virtualization
+dnf5 -y install  kvantum cliphist qt6ct niri #ffmpegthumbnailer kitty
+#dnf5 -y install @virtualization
 #dnf5 -y install --repo=updates niri
 
 dnf5 -y --enable-repo=librewolf install librewolf
