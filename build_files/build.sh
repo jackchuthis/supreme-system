@@ -14,16 +14,18 @@ set -ouex pipefail
 dnf5 -y config-manager addrepo --from-repofile=https://repo.librewolf.net/librewolf.repo
 dnf5 -y config-manager addrepo --from-repofile=https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo
 dnf5 -y config-manager addrepo --from-repofile=https://repository.mullvad.net/rpm/stable/mullvad.repo
+dnf5 -y install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
+dnf5 -y install https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
 # this installs a package from fedora repos
-dnf5 -y install kitty kvantum cliphist qt6ct niri #ffmpegthumbnailer
+dnf5 -y install kitty kvantum cliphist qt6ct niri libavcodec-freeworld #ffmpegthumbnailer
 dnf5 -y install @virtualization
 #dnf5 -y install --repo=updates niri
 
 dnf5 -y --enable-repo=librewolf install librewolf
 dnf5 -y --enable-repo=brave-browser install brave-browser
 dnf5 -y --enable-repo=mullvad-stable install mullvad-vpn
-dnf5 -y --enable-repo=terra install asusctl asusctl-rog-gui noctalia-qs noctalia-shell mpvpaper nwg-look mangowm #mangowm supergfxctl
+dnf5 -y --enable-repo=terra install asusctl asusctl-rog-gui noctalia-qs noctalia-shell mpvpaper nwg-look #mangowm supergfxctl
 #dnf5 -y --releasever=rawhide --enable-repo=terra install noctalia-shell mangowm asusctl asusctl-rog-gui supergfxctl
 
 # dnf5 -y copr enable lukenukem/asus-linux
