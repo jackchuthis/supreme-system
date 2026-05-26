@@ -14,11 +14,11 @@ set -ouex pipefail
 dnf5 -y config-manager addrepo --from-repofile=https://repo.librewolf.net/librewolf.repo
 dnf5 -y config-manager addrepo --from-repofile=https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo
 dnf5 -y config-manager addrepo --from-repofile=https://repository.mullvad.net/rpm/stable/mullvad.repo
-dnf5 -y install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
-dnf5 -y install https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+# dnf5 -y install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
+# dnf5 -y install https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
 # this installs a package from fedora repos
-dnf5 -y install kitty kvantum cliphist qt6ct niri libavcodec-freeworld #ffmpegthumbnailer
+dnf5 -y install kitty kvantum cliphist qt6ct niri kimageformat-plugins kio-extras kdegraphics-thumbnailers #ffmpegthumbnailer
 dnf5 -y install @virtualization
 #dnf5 -y install --repo=updates niri
 
