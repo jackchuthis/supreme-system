@@ -11,7 +11,7 @@
   "monitorSpecific": true,
   "DP-2": {
     "currentWallpaper": "/var/home/zeph/Pictures/wallpapers/cyberpunk-neon-tokyo-urban-street-moewalls-com.mp4",
-    "isPlaying": true,
+    "isPlaying": false,
     "volume": 1,
     "automation": false,
     "automationMode": "random",
@@ -35,7 +35,7 @@
     "profile": "default",
     "fillMode": "stretch",
     "orientation": 0,
-    "isPlaying": true,
+    "isPlaying": false,
     "noctaliaWallpaper": "/home/zeph/Pictures/wallpapers/aishot-1341.jpg",
     "isMuted": true
   },
