@@ -26,7 +26,7 @@ dnf5 -y install  kvantum cliphist qt6ct niri #ffmpegthumbnailer kitty
 dnf5 -y --enable-repo=librewolf install librewolf
 dnf5 -y --enable-repo=brave-browser install brave-browser
 dnf5 -y --enable-repo=mullvad-stable install mullvad-vpn
-dnf5 -y --enable-repo=terra install noctalia mpvpaper nwg-look asusctl #mangowm supergfxctl asusctl asusctl-rog-gui
+dnf5 -y --enable-repo=terra install noctalia mpvpaper nwg-look #mangowm supergfxctl asusctl asusctl-rog-gui
 #dnf5 -y --releasever=rawhide --enable-repo=terra install noctalia-shell mangowm asusctl asusctl-rog-gui supergfxctl
 
 # dnf5 -y copr enable lukenukem/asus-linux
