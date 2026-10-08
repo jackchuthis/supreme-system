@@ -3,7 +3,7 @@ FROM scratch AS ctx
 COPY build_files /
 
 # Base Image
-FROM ghcr.io/ublue-os/aurora-dx-nvidia-open:latest
+FROM ghcr.io/ublue-os/aurora-dx:latest
 #bazzite-nvidia-open:stable
 
 ## Other possible base images include:
